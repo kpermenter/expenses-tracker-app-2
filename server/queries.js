@@ -1,9 +1,17 @@
 const Pool = require('pg').Pool;
+// const pool = new Pool({
+//   user: 'kpermenter',
+//   host: 'localhost',
+//   database: 'kpermenter',
+//   password: '12345',
+//   port: 5432,
+// });
+
 const pool = new Pool({
-  user: 'kpermenter',
-  host: 'localhost',
-  database: 'kpermenter',
-  password: '12345',
+  user: 'iiixfljtmygllw',
+  host: 'ec2-3-226-163-72.compute-1.amazonaws.com',
+  database: 'd8b7e21hfr8vqu',
+  password: '58b0cd07222408610b618274644ca355d7277fa8e5acdff94c1bc785750adfde',
   port: 5432,
 });
 
