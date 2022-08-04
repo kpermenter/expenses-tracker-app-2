@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import { useContext } from 'react';
+// import { ExpenseLogsContext } from './context/ExpenseContext'
+import { ExpenseLogsContextContainer } from './context/ExpenseContextContainer';
+import { ToolbarExpenses } from './components/Toolbar/Toolbar';
+import { ExpensesTable } from './components/Table/Table';
+import { FormDialog } from './components/CreateExpense/CreateExpense';
 
-function App() {
+export const App = () => {
+  // const { expenseLogs, updateContextValue } = useContext(ExpenseLogsContext);
+
+  // const {
+  //   data,
+  //   createModalOpen,
+  // } = expenseLogs;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ExpenseLogsContextContainer>
+       <>
+          <FormDialog />
+          <ToolbarExpenses />
+          <ExpensesTable />
+        </>
+      {/* {data && data.length ?
+        <>
+          <FormDialog />
+          <ToolbarExpenses />
+          <ExpensesTable />
+        </>
+        : null} */}
+    </ExpenseLogsContextContainer>
   );
 }
-
-export default App;
